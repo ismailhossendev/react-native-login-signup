@@ -1,13 +1,11 @@
-import { View, Text, StyleSheet, Image, TextInput, ScrollView, Pressable } from 'react-native'
+import { View, Text, Image, StyleSheet, TextInput, Pressable } from 'react-native'
 import React from 'react'
 
-export default function SignUp({navigation}) {
-    return (
-        <ScrollView style={styles.container}>
-            <Image source={require('../assets/image/signupImage.png')} />
-            <View style={styles.InputContainer}>
-                <Text style={styles.label}>Name</Text>
-                <TextInput style={styles.input} placeholder="Your Name" />
+export default function Login() {
+  return (
+    <View>
+      <Image source={require('../assets/image/signupImage.png')}/>
+      <View style={styles.InputContainer}>
                 <Text style={styles.label}>Email Address</Text>
                 <TextInput style={styles.input} placeholder="name@example.com" />
                 <Text style={styles.label}>Password</Text>
@@ -15,14 +13,11 @@ export default function SignUp({navigation}) {
             </View>
             <View style={styles.btnContainer}>
                 <Pressable style={styles.btn}>
-                    <Text style={styles.btnText}>Sign Up</Text>
+                    <Text style={styles.btnText}>Sign In</Text>
                 </Pressable>
-                <Text style={styles.login}
-                onPress={() => navigation.navigate('login')}
-                >You have account? Sign in</Text>
             </View>
-        </ScrollView>
-    )
+    </View>
+  )
 }
 const styles = StyleSheet.create({
     container: {
